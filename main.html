@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Glukus</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- En-tête -->
+    <header>
+        <nav>
+            <p id="date">Date du jour</p>
+        </nav>
+    </header>
+
+    <!-- Contenu principal -->
+    <main>
+        <section id="accueil">
+            <h1>Glukus</h1>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2025</p>
+    </footer>
+
+    <!-- Inclusion de JavaScript -->
+    <script>
+        var today = new Date();
+        var day = today.getDate();
+        var month = today.getMonth() + 1;
+        var year = today.getFullYear();
+
+        function formatNumber(number) {
+            if (number < 10) {
+                return '0' + number;
+            }
+            return number;
+        }
+
+        var formattedDay = formatNumber(day);
+        var formattedMonth = formatNumber(month);
+
+        var formattedDate = formattedDay + '/' + formattedMonth + '/' + year;
+
+        document.getElementById('date').textContent = formattedDate;
+    </script>
+
+</body>
+</html>
