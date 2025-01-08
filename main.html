@@ -9,26 +9,29 @@
 </head>
 <body>
 
-    <!-- En-tête -->
     <header>
         <nav>
             <p id="date">Date du jour</p>
         </nav>
     </header>
 
-    <!-- Contenu principal -->
     <main>
         <section id="accueil">
             <h1>Glukus</h1>
+
+            <form id="dataForm">
+                <label for="data">Entrez votre taux de glucose</label>
+                <input type="text" id="data" name="data" placeholder="000" required>
+                <button type="submit">Enregistrer</button>
+            </form>
+            
         </section>
     </main>
 
-    <!-- Pied de page -->
     <footer>
         <p>&copy; 2025</p>
     </footer>
 
-    <!-- Inclusion de JavaScript -->
     <script>
         var today = new Date();
         var day = today.getDate();
@@ -48,6 +51,7 @@
         var formattedDate = formattedDay + '/' + formattedMonth + '/' + year;
 
         document.getElementById('date').textContent = formattedDate;
+          
     </script>
 
 </body>
